@@ -5,4 +5,12 @@ const capitalize = (string) => {
   return firstLetterCapitalized.concat(restOfString);
 };
 
-export { capitalize };
+const reverseString = (string) => {
+  let reversedString = '';
+  for (let index = string.length - 1; index >= 0; index--) {
+    let char = string[index];
+    reversedString += char;
+  }
+  return reversedString;
+};
+export { capitalize, reverseString };
