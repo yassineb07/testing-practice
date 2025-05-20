@@ -1,5 +1,6 @@
 import { capitalize, reverseString, calculator } from './testing-practice';
 
+// capitalize function tests
 test('capitalize lower case string', () => {
   expect(capitalize('dog')).toBe('Dog');
 });
@@ -10,6 +11,7 @@ test('capitalize Uppercase string', () => {
   expect(capitalize('RABBIT')).toBe('Rabbit');
 });
 
+// reverse string function tests
 test('reverse String', () => {
   expect(reverseString('food')).toBe('doof');
 });
@@ -32,6 +34,7 @@ test('calculator add positive and negative numbers', () => {
 test('calculator add float numbers', () => {
   expect(calculator1.add(0.1, 2.5)).toBeCloseTo(2.6);
 });
+
 // subtract function tests
 test('calculator subtract positive numbers', () => {
   expect(calculator1.subtract(5, 2)).toEqual(3);
@@ -45,6 +48,7 @@ test('calculator subtract positive and negative numbers', () => {
 test('calculator subtract float numbers', () => {
   expect(calculator1.subtract(5.3, 2.2)).toBeCloseTo(3.1);
 });
+
 // multiply function tests
 test('calculator multiply positive numbers', () => {
   expect(calculator1.multiply(5, 6)).toEqual(30);
@@ -58,6 +62,7 @@ test('calculator multiply positive and negative numbers', () => {
 test('calculator multiply float numbers', () => {
   expect(calculator1.multiply(0.1, 2.5)).toBeCloseTo(0.25);
 });
+
 // divide function tests
 test('calculator divide positive numbers', () => {
   expect(calculator1.divide(1, 2)).toEqual(0.5);
