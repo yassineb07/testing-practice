@@ -1,4 +1,9 @@
-import { capitalize, reverseString, calculator } from './testing-practice';
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+} from './testing-practice';
 
 // capitalize function tests
 test('capitalize lower case string', () => {
@@ -75,4 +80,21 @@ test('calculator divide positive and negative numbers', () => {
 });
 test('calculator divide float numbers', () => {
   expect(calculator1.divide(0.5, 2)).toBeCloseTo(0.25);
+});
+
+// caesarCipher function tests
+test('caesarCipher happy path', () => {
+  expect(caesarCipher('abc', 3)).toBe('def');
+});
+test('caesarCipher loop after z', () => {
+  expect(caesarCipher('xyz', 3)).toBe('abc');
+});
+test('caesarCipher loop after Z', () => {
+  expect(caesarCipher('XYZ', 3)).toBe('ABC');
+});
+test('caesarCipher keep letter case', () => {
+  expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+});
+test('caesarCipher keep punctuation', () => {
+  expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
