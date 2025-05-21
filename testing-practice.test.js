@@ -3,6 +3,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from './testing-practice';
 
 // capitalize function tests
@@ -97,4 +98,19 @@ test('caesarCipher keep letter case', () => {
 });
 test('caesarCipher keep punctuation', () => {
   expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
+
+// analyze array function tests
+const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+test('analyze array average', () => {
+  expect(object.average).toBe(4);
+});
+test('analyze array min', () => {
+  expect(object.min).toBe(1);
+});
+test('analyze array max', () => {
+  expect(object.max).toBe(8);
+});
+test('analyze array length', () => {
+  expect(object.length).toBe(6);
 });

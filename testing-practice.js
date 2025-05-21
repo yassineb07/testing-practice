@@ -69,4 +69,14 @@ const caesarCipher = (string, shiftFactor) => {
   return shiftedString;
 };
 
-export { capitalize, reverseString, calculator, caesarCipher };
+const analyzeArray = (array) => {
+  const average =
+    array.reduce((tot, num) => {
+      return tot + num;
+    }) / array.length;
+  const min = Math.min(...array);
+  const max = Math.max(...array);
+  const length = array.length;
+  return { average, min, max, length };
+};
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
